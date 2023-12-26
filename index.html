@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PORTFOLIO</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="nav">
+            <div class="logo" id="logo"><img class="logo-img" src="image.logo.jpg" alt="logo_img"></div>
+            <div class="links">
+                <a class="opt" href="#">Home</a>
+                <a class="opt" href="#">About</a>
+                <a class="opt" href="#skills">Skills</a>
+                <a class="opt" href="/KUSUM KHARAYAT (1).pdf">Portfolio</a>
+                <button class="button"><a href="/contact/contact.html">Contact</a></button>
+            </div>
+        </div>
+        <div class="header">
+            <div class="site_header_mask">
+                <div class="site_title">
+                    KUSUM KHARAYAT
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="cont">
+                        <img class="pfl" src="user.png">
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">ABOUT ME</h1>
+                    <br>
+                    <p>I am currently in 2rd year of my Undergrad(Bachelor's of Technology) pursuing Electronics and
+                        Communication Engineering from Maharshi Dayanand University.
+                        I'm proficient in HTML, CSS & Javascript. I'm passionate and enthusiastic about technology and
+                        constantly strive to expand my knowledge and skills in this field.<br>
+                        I love reading, writing and listening to music.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('languages')">Languages known</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Javascript</span></li>
+                            <li><span>C++</span></li>
+                            <li><span>Python</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Bachelor's of Technology in Electronics and Comuunication
+                                Engineering at<br> Maharshi Dayanand University</li>
+                            <li><span>2022</span><br>Completed XII from Mayur Public School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <li><span>English</span></li>
+                            <li><span>Hindi</span></li>
+                            <li><span>Kumaoni</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <div>
+                    <img class="flogo" src="image.logo.jpg">
+                    <div class="tagline">Portfolio</div>
+                    <div class="logo-array">
+                        <a href="https://github.com/kusumkharyat740"><img class="lg" src="/github.png"></a>
+                        <a href="https://www.linkedin.com/in/kusum-kharayat-8b2916274/"><img class="lg" src="/linkedin.png"></a>
+                        <img class="lg" src="/whatsapp.png">
+                        <img class="lg" src="/gmail.png">
+                    </div>
+                </div>
+            <div class="copy">
+                <hr>
+                <p>Privacy Policy</p>
+                <p>Copyright © 2023 All Rights Reserved by Kusum Kharayat</p>
+                <p>Made with 🤍 by Kusum</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            console.log('Scroll event fired');
+            var nav = document.querySelector('.nav');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
